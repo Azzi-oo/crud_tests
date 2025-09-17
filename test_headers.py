@@ -27,8 +27,21 @@ def test_get_author(mock_requests_post):
     assert response.json() == created_author
     
 
-# s = requests.Session()
-# s.get("https://url")
-
-# with requests.Session() as session:
-#     session.get("https://url")
+def test_with_session():
+    try:
+        with requests.Session() as session:
+            # Для тестирования используйте реальный URL
+            response = session.get(
+                "https://httpbin.org/json",  # Тестовый URL
+                timeout=10,
+                headers={'User-Agent': 'test-script'}
+            )
+            response.raise_for_status()
+            print("Success!")
+            
+    except requests.exceptions.ConnectionError:
+        print("Ошибка соединения - проверьте интернет")
+    except requests.exceptions.Timeout:
+        print("Таймаут запроса")
+    except Exception as e:
+        print(f"Другая ошибка: {e}")
