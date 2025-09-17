@@ -1,0 +1,6 @@
+2025-09-17 16:28:04,797 DEBUG:pretenders.server.server:44: Setting pretender timeout: 120
+2025-09-17 16:28:04,797 DEBUG:pretenders.server.server:16: Starting maintainer process
+2025-09-17 16:28:04,846 INFO:pretenders.client:98: Requesting None pretender. Port:8000 Timeout:None (None)
+2025-09-17 16:34:37,917 DEBUG:pretenders.server.server:44: Setting pretender timeout: 120
+2025-09-17 16:34:37,918 DEBUG:pretenders.server.server:16: Starting maintainer process
+2025-09-17 16:34:37,964 INFO:pretenders.client:98: Requesting None pretender. Port:8000 Timeout:None (None)
